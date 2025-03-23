@@ -31,7 +31,7 @@ $ mv ~/.cache/nvim{,.bak}
 
 Clone repository and move the `nvim` and `fugue` repositories into your `~/.config/`
 ```sh
-git clone 
+git clone git@github.com:FugueSoft/nvim-unleashed.git
 cd nvim-unleashed
 cp nvim ~/.config/nvim/
 cp fugue ~/.config/fugue/
