@@ -44,8 +44,8 @@ nvim
 # Within Neovim:
 :Lazy install
 ```
-Once Lazy is done installing, close the window with 'q'
-Quit and reopen Neovim
+Once Lazy is done installing, close the window with 'q'.
+Quit and reopen Neovim.
 Enjoy your configuration!
 
 If you want to try another configuration, make sure the appropriately named subdirectory
@@ -86,7 +86,7 @@ for each one.
 > For the plugins and autocommands they will require a table of some kind.
 > Plugins want the plugin spec inside of the table and autocommands usually want
 > to return an empty table at the end of the script. See more examples in my
-> config and in the kickstart.lua
+> [config](./fugue/lua/core/) and in the [kickstart.lua](./nvim/kickstart.lua) 
 
 > [!TIP]
 > Both of these are the same thing, but older vim plugins usually prefer the
