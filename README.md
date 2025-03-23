@@ -72,7 +72,7 @@ I have been able to conjure up.
 
 For my config, I've taken the basic kickstart init.lua and pulled out all the
 plugins and autocommands into separate files. In the `lua/core/plugins` and `lua/core/autocommands` 
-directories, you will see `_configure` and `_disable`. These are just easy was
+directories, you will see `_configure/` and `_disable/`. These are just easy was
 for me to setup or disable plugins/autocommands without having to:
 ```sh
 return {
