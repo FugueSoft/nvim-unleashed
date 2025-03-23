@@ -1,0 +1,3 @@
+return {
+  'aperezdc/vim-template',
+}
