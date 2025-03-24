@@ -1,7 +1,7 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
-vim.keymap.set('n', '<space><space>x', '<cmd>source %<CR>')
+vim.keymap.set('n', '<space><space>x', '<cmd>source %<CR>:echo("file sourced")<CR>')
 vim.keymap.set('n', '<space>x', ':.lua<CR>')
 vim.keymap.set('v', '<space>x', ':lua<CR>')
 vim.keymap.set('n', '<space>p', ':.py<CR>')
@@ -52,8 +52,8 @@ vim.keymap.set('i', '<A-j>', '<Esc>:m .+1<CR>==gi', { desc = 'move line down' })
 vim.keymap.set('i', '<A-k>', '<Esc>:m .-2<CR>==gi', { desc = 'move line up' })
 vim.keymap.set('v', '<A-j>', "<Esc>:m '>+1<CR>gv=gi", { desc = 'move line down' })
 vim.keymap.set('v', '<A-k>', "<Esc>:m '<-2<CR>gv=gv", { desc = 'move line up' })
-vim.keymap.set('n', '<A-j>', 'ddp', { desc = 'move line down' })
-vim.keymap.set('n', '<A-k>', 'ddkP', { desc = 'move line up' })
+vim.keymap.set('n', '<A-j>', '<Esc>:m .+1<CR>==:echo("move line down")<CR>', { desc = 'move line down' })
+vim.keymap.set('n', '<A-k>', '<Esc>:m .-2<CR>==:echo("move line up")<CR>', { desc = 'move line up' })
 
 -- Write a keymap to move lines in normal mode.
 -- vim.keymap.set('n', '<A-J>', "<Esc>:m '>+1<CR>gv=gi", { desc = 'move line down' })

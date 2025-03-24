@@ -18,3 +18,6 @@ set.expandtab = false
 -- Folding
 set.foldmethod = 'indent'
 set.foldlevel = 99
+
+vim.cmd [[:hi Folded ctermfg=Green]]
+vim.cmd [[:hi Folded ctermbg=141]]
