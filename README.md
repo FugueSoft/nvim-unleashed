@@ -20,21 +20,21 @@ If you don't have it you can get it [here](https://github.com/neovim/neovim)
 
 ### Backup Current Neovim Configuration
 
-You can make a backup of your current neovim configuration if you have one
+You can make a backup of your current neovim configuration if you have one:
 ```sh
 $ mv ~/.config/nvim{,.bak}
 $ mv ~/.local/state/nvim{,.bak}
 $ mv ~/.cache/nvim{,.bak}
 ```
 
-### Download and Install the Configuration
+### Download and Install the New Configuration
 
 Clone repository and move the `nvim` and `fugue` repositories into your `~/.config/`
 ```sh
-git clone git@github.com:FugueSoft/nvim-unleashed.git
-cd nvim-unleashed
-cp nvim ~/.config/nvim/
-cp fugue ~/.config/fugue/
+$ git clone git@github.com:FugueSoft/nvim-unleashed.git
+$ cd nvim-unleashed
+$ cp nvim ~/.config/nvim/
+$ cp fugue ~/.config/fugue/
 ```
 
 ### Run Neovim and Initialize Lazy Package Manager
@@ -44,12 +44,12 @@ nvim
 # Within Neovim:
 :Lazy install
 ```
-Once Lazy is done installing, close the window with 'q'.
-Quit and reopen Neovim.
+Once Lazy is done installing, close the window with 'q'. \
+Quit and reopen Neovim. \
 Enjoy your configuration!
 
 If you want to try another configuration, make sure the appropriately named subdirectory
-is located in your ~/.config directory (e.g. ~/.config/fugue). Once set, run:
+is located in your `~/.config` directory (e.g. ~/.config/fugue). Once set, run:
 
 ```sh
 NVIM_APPNAME=fugue nvim
@@ -83,7 +83,7 @@ return {
 for each one.
 
 > [!NOTE]
-> For the plugins and autocommands they will require a table of some kind.
+> For the plugins and autocommands they will require a lua table of some kind.
 > Plugins want the plugin spec inside of the table and autocommands usually want
 > to return an empty table at the end of the script. See more examples in my
 > [config](./fugue/lua/core/) and in the [kickstart.lua](./nvim/kickstart.lua) 
