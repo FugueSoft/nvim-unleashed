@@ -57,17 +57,17 @@ If you want to try another configuration, make sure the appropriately named subd
 is located in your `~/.config` directory (e.g. ~/.config/<dirname>). Once set, run:
 
 ```sh
-NVIM_APPNAME=fugue nvim # Switches config to use 'fugue' directory
-NVIM_APPNAME=kickstart nvim # Switches config to use 'kickstart' directory
-NVIM_APPNAME=kickstart-modular nvim # Switches config to use 'kickstart-modular' directory
+$ NVIM_APPNAME=fugue nvim # Switches config to use 'fugue' directory
+$ NVIM_APPNAME=kickstart nvim # Switches config to use 'kickstart' directory
+$ NVIM_APPNAME=kickstart-modular nvim # Switches config to use 'kickstart-modular' directory
 ```
 
 The `nvim` command will still operate on the default config so it may be useful
 to alias the command:
 ```sh
-alias fvi='NVIM_APPNAME=fugue nvim'
-alias kvi='NVIM_APPNAME=kickstart nvim'
-alias kmvi='NVIM_APPNAME=kickstart-modular nvim'
+$ alias fvi='NVIM_APPNAME=fugue nvim'
+$ alias kvi='NVIM_APPNAME=kickstart nvim'
+$ alias kmvi='NVIM_APPNAME=kickstart-modular nvim'
 ```
 
 ## Kickstart
@@ -127,8 +127,9 @@ mentioned! :)
 
 ### Directory Layouts
 
-These are the tree layouts for each directory:
+These are the tree-style layouts for each directory:
 
+#### nvim/
 ```sh
 # nvim (FOSS Unleashed)
 .
@@ -165,6 +166,7 @@ These are the tree layouts for each directory:
 12 directories, 18 files
 ```
 
+#### kickstart/
 ```sh
 # kickstart
 .
@@ -192,6 +194,7 @@ These are the tree layouts for each directory:
 7 directories, 14 files
 ```
 
+#### kickstart-modular/
 ```sh
 # kickstart-modular
 .
@@ -238,6 +241,7 @@ These are the tree layouts for each directory:
 8 directories, 32 files
 ```
 
+#### fugue/
 ```sh
 # fugue
 .
