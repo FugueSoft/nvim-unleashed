@@ -133,7 +133,7 @@ These are the tree-style layouts for each directory:
 ```sh
 # nvim (FOSS Unleashed)
 .
-├── FOSSUnleashed.vim # old .vimrc
+├── FOSS_Unleashed.vim # old .vimrc
 ├── after
 │   └── ftplugin
 ├── doc
