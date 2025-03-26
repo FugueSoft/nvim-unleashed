@@ -11,6 +11,9 @@
 -- end ---@diagnostic disable-next-line: undefined-field
 -- vim.opt.rtp:prepend(lazypath)
 
+vim.g.mapleader = ' '
+vim.g.maplocalleader = '\\'
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -31,8 +34,6 @@ vim.opt.runtimepath:prepend(lazypath)
 -- Make sure to setup `mapleader` and `maplocalleader` before
 -- loading lazy.nvim so that mappings are correct.
 -- This is also a good place to setup other settings (vim.opt)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
 
 -- Setup lazy.nvim
 require('lazy').setup {
