@@ -29,15 +29,16 @@ $ mv ~/.cache/nvim{,.bak}
 
 ### Download and Install the New Configuration
 
-Clone repository and move each configuration you want to try into your
-$XDG_CONFIG_HOME (usually `~/.config/`)
+Clone repository and copy, move or link each configuration you want to try into your
+$XDG_CONFIG_HOME (usually `~/.config/`) \
+Linking example:
 ```sh
 $ git clone git@github.com:FugueSoft/nvim-unleashed.git
 $ cd nvim-unleashed
-$ cp nvim ~/.config/nvim/ # based on your .vimrc
-$ cp fugue ~/.config/fugue/ # my config
-$ cp kickstart ~/.config/kickstart/ # kickstart OG
-$ cp kickstart-modular ~/.config/kickstart-modular/ # kickstart modularized
+$ ln -s nvim ~/.config/nvim/ # based on your .vimrc
+$ ln -s fugue ~/.config/fugue/ # my config
+$ ln -s kickstart ~/.config/kickstart/ # kickstart OG
+$ ln -s kickstart-modular ~/.config/kickstart-modular/ # kickstart modularized
 ```
 
 ### Run Neovim and Initialize Lazy Package Manager
@@ -54,7 +55,7 @@ Enjoy your configuration!
 ## Usage
 
 If you want to try another configuration, make sure the appropriately named subdirectory
-is located in your `~/.config` directory (e.g. ~/.config/<dirname>). Once set, run:
+is located in your `$XDG_CONFIG_HOME` directory (e.g. `~/.config/<directory-name>`). Once set, run:
 
 ```sh
 $ NVIM_APPNAME=fugue nvim # Switches config to use 'fugue' directory
@@ -73,21 +74,21 @@ $ alias kmvi='NVIM_APPNAME=kickstart-modular nvim'
 ## Kickstart
 
 Most of these instructions are ripped from [kickstart.nvim's](https://github.com/nvim-lua/kickstart.nvim) README.md.
-I've included this file and the initial init.lua from kickstart in 
+I've included this file and the initial init.lua from kickstart as 
 `nvim/kickstart.md` and `nvim/kickstart.lua` respectively. I'd recommend 
 taking a look as their documentation is far more robust than what I 
 have been able to conjure up.
 
 You can see the original config as kickstart intended in the `./kickstart/`
 directory. I've created a `./kickstart-modular/` directory as well that has all
-of the plugins and autocommands normally found in `init.lua` split into their
+of the plugins and autocommands normally found in kickstart.nvim's `init.lua` split into their
 own files within subdirectories.
 
 ### My Tweaks
 
 For my config, I've taken the basic kickstart init.lua and pulled out all the
 plugins and autocommands into separate files. In the `lua/core/plugins` and `lua/core/autocommands` 
-directories, you will see `_configure/` and `_disable/`. These are just easy was
+directories, you will see `_configure/` and `_disable/`. These are just easy ways
 for me to setup or disable plugins/autocommands without having to:
 ```sh
 return {
@@ -101,7 +102,7 @@ I took what I could find in your .vimrc and reformated the plugins, options and
 keymaps to work with a modular neovim configuration.
 
 > [!NOTE]
-> For the plugins and autocommands they will require a lua table of some kind.
+> Plugins and autocommands they will require returning a lua table of some kind.
 > Plugins want the plugin spec inside of the table and autocommands usually want
 > to return an empty table at the end of the script. See more examples in my
 > [config](./fugue/lua/core/) and in the [kickstart.lua](./nvim/kickstart.lua) 
